@@ -12,7 +12,7 @@ while value_check:
         radius = float(input("Hei, mikä on ympyrän säde?: "))
         value_correct = False
     except ValueError:
-        print("Käytä vaan '.' kun sinulla ei ole kokonaisluku")
+        print("Käytä vaan '.' kun sinulla ei ole kokonaisluku :)")
 
 
 area = pi * radius ** 2
