@@ -9,7 +9,6 @@ korkeus = float(input("Mikä on suorakulmion korkeus?: "))
 suorakulmion_piiri = suorakulmion_kanta * 2 + korkeus * 2
 pinta_alan = suorakulmion_kanta * korkeus
 
-print("Kiitos!\n"
-      "Suorakulmion piiri on: %.2f\n"
-      "Suorakulmion pinta-ala on: %.2f"
-      % (suorakulmion_piiri, pinta_alan))
+print(f"Kiitos!\n"
+      f"Suorakulmion piiri on: {suorakulmion_piiri:.2f}\n"
+      f"Suorakulmion pinta-ala on: {pinta_alan:.2f}")
