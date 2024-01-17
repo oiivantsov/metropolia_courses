@@ -6,6 +6,6 @@ Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin Terve, Ahmed!
 
 """
 
-name = input("Mikä on nimesi?: ").capitalize()
-print(f"Terve, {name}!")
+nimi = input("Mikä on nimesi?: ").capitalize()
+print(f"Terve, {nimi}!")
 
