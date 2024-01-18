@@ -10,22 +10,17 @@ arpapeli = True
 
 while arpapeli:
 
-    kolmenumeroisen_koodi = "Kolmenumeroisen koodi: | "
-    nelinumeroisen_koodi = "Nelinumeroisen koodi: | "
-
     peli_paatos = input("Haluatko arpoa ('y' = Kyllä, 'n' = Ei)?: ").lower()
 
     if peli_paatos == "y":
-        for i in range(1, 5):
 
-            if i < 4:
-                kolmenumeroisen_koodi += f"{random.randint(0, 9)} | "
-                nelinumeroisen_koodi += f"{random.randint(1, 6)} | "
-            else:
-                nelinumeroisen_koodi += f"{random.randint(1, 6)} | "
+        koodi_3 = f"Kolmenumeroisen koodi: " \
+                  f"{random.randint(0, 9)} | {random.randint(0, 9)} | {random.randint(0, 9)}"
+        koodi_4 = f"Nelinumeroisen koodi: " \
+                  f"{random.randint(1, 6)} | {random.randint(1, 6)} | {random.randint(1, 6)} | {random.randint(1, 6)}"
 
-        print(kolmenumeroisen_koodi[:-1])
-        print(nelinumeroisen_koodi[:-1])
+        print(koodi_3)
+        print(koodi_4)
 
     else:
         arpapeli = False

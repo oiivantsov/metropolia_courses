@@ -7,4 +7,4 @@ from math import pi
 sade = float(input("Hei, mikä on ympyrän säde?: "))
 ala = pi * sade * sade
 
-print("Kiitos!\nYmpyrän pinta-ala on: %.2f" % ala)
+print(f"Kiitos!\nYmpyrän pinta-ala on: {ala:.2f}")
