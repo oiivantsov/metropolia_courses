@@ -5,7 +5,7 @@ tai Oikein. Huomaa, että tietokone ei saa vaihtaa lukuaan arvauskertojen välis
 from random import randint
 
 arpo_luku = randint(1, 10)
-print(arpo_luku)
+# print(arpo_luku)
 entry = int(input("Anna luku 1-10: "))
 
 while arpo_luku != entry:
