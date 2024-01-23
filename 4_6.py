@@ -13,7 +13,7 @@ ohjelma tulostaa piin likiarvon käyttäjälle. (Huomaa, että jokaisesta arvotu
 onko se yksikköympyrän A sisällä: riittää testata, toteuttaako piste epäyhtälön x^2+y^2<1.)
 """
 
-from random import random
+from random import uniform
 from math import pi
 
 # N = 10 ** 6
@@ -23,9 +23,9 @@ n = 0 # ympyrän sisällä
 i = 1
 
 while i <= N:
-    x, y = random(), random()
+    x, y = uniform(-1, 1), uniform(-1, 1)
     # print(f"x: {x}, y: {y}")
-    if x ** 2 + y ** 2 < 1:
+    if x ** 2 + y ** 2 <= 1:
         n += 1
     i += 1
 
