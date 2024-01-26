@@ -50,6 +50,7 @@ def run():
                 "hinta_per_cm": per_lasku(halk=pizzan_halk, hinta=pizzan_hinta)
             }
         )
+
         i += 1
 
     print(paras_hinta(pizzat))
