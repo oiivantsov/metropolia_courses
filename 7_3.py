@@ -44,7 +44,7 @@ def peli():
         elif valinta == 3:
             onko_peli = False
 
-    print(lentoasemat)
+    # print(lentoasemat)
 
 
 peli()
