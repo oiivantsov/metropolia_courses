@@ -5,8 +5,8 @@ monikkotietorakenteeseen. Määritellään kukin vuodenaika kolmen kuukauden mit
 ensimmäinen talvikuukausi.
 """
 
-vuodenajat = ("talvi", "talvi", "talvi", "kevät", "kevät", "kevät", "kesä", "kesä", "kesä", "syksy", "syksy", "syksy")
+vuodenajat = ("talvi", "talvi", "kevät", "kevät", "kevät", "kesä", "kesä", "kesä", "syksy", "syksy", "syksy", "talvi")
 jarjestysnumero = int(input("Anna kuukauden järjestysnumero (1-12): "))
 vuodenaika = vuodenajat[jarjestysnumero - 1]
-print (f"{jarjestysnumero}. kuukauden vuodenaika on {vuodenaika}.")
+print(f"{jarjestysnumero}. kuukauden vuodenaika on {vuodenaika}.")
 
