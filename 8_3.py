@@ -37,7 +37,7 @@ def lan_long_search(icao):
         }
         return data
     else:
-        print("Haettu ICAO-koodi ei ole olemassa.")
+        print("This code is missing from database!")
         return False
 
 
