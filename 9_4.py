@@ -13,7 +13,7 @@ from random import randint
 
 # ----------------- OLIO ------------------------------
 
-colors = ["\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[35m", "\033[93m", "\033[97m", "\033[95m", "\033[96m", "\033[90m"]
+colors = ["\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[35m", "\033[93m", "\033[97m", "\033[95m", "\033[96m", "\033[90m"] * 10
 color_off = "\033[0m"
 line = "-----------------------------------"
 
@@ -52,6 +52,7 @@ class Auto:
 
 # ----------------- KILPAILU-OHJELMA ------------------------------
 
+autojen_maara = 10
 max_nopeuden_muutos = 15
 min_nopeuden_muutos = -10
 max_nopeus = 200
@@ -59,7 +60,7 @@ min_nopeus = 100
 etaisyys = 10_000
 aika_vali = 1
 
-autot = [Auto(rekisteritunnus=f"ABC-{i+1}", huippunopeus=randint(min_nopeus, max_nopeus), color=colors[i]) for i in range(10)]
+autot = [Auto(rekisteritunnus=f"ABC-{i+1}", huippunopeus=randint(min_nopeus, max_nopeus), color=colors[i]) for i in range(autojen_maara)]
 i = 1
 print(line)
 
