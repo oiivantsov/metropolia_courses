@@ -118,6 +118,7 @@ def main():
             kilpailu.tulosta_tilanne()
 
     kilpailu.tulosta_tilanne(malli=True)
+    return
 
 
 main()
