@@ -87,8 +87,8 @@ class Kilpailu:
 
         Kilpailu.tunnit += aika_vali
 
-    def tulosta_tilanne(self):
-        if not self.kilpailu_ohi():
+    def tulosta_tilanne(self, malli=False):
+        if not malli:
             print(f"{color_bold}{color_cian}Tunti: {Kilpailu.tunnit}{color_off}")
             print(dots)
             for auto in self.autot:
@@ -114,10 +114,10 @@ def main():
     print(dots)
     while not kilpailu.kilpailu_ohi():
         kilpailu.tunti_kuluu()
-        if kilpailu.tunnit % 10 == 0 and not kilpailu.kilpailu_ohi(): # toinen ehto koska jos viimeisellä autolla % 10 tuntia, ohjelmaa tulostaa tilanteen 2 kertaa
+        if kilpailu.tunnit % 10 == 0:
             kilpailu.tulosta_tilanne()
 
-    kilpailu.tulosta_tilanne()
+    kilpailu.tulosta_tilanne(malli=True)
 
 
 main()
