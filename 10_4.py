@@ -24,9 +24,9 @@ min_nopeus = 100
 pituus = 8_000
 aika_vali = 1
 
-
 # ----------------- STYLE & COLORS ------------------------------
-colors = ["\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[1m\033[90m", "\033[93m", "\033[97m", "\033[95m", "\033[96m", "\033[35m"] * 10
+colors = ["\033[31m", "\033[32m", "\033[33m", "\033[34m", "\033[1m\033[90m", "\033[93m", "\033[97m", "\033[95m",
+          "\033[96m", "\033[35m"] * 10
 color_bold = '\033[1m'
 color_cian = '\033[96m'
 color_off = "\033[0m"
@@ -89,13 +89,15 @@ class Kilpailu:
 
     def tulosta_tilanne(self):
         if not self.kilpailu_ohi():
+            print(f"{color_bold}{color_cian}Tunti: {Kilpailu.tunnit}{color_off}")
+            print(dots)
             for auto in self.autot:
                 print(auto)
         else:
             print(f'{color_bold}{color_cian}"{self.nimi}" TULOKSET!{color_off}')
             print(dots)
             for i in range(len(self.malli_autot)):
-                print(f"{color_bold}{i+1} sija:{color_off}")
+                print(f"{color_bold}{i + 1} sija:{color_off}")
                 print(self.malli_autot[i])
 
     def kilpailu_ohi(self):
@@ -112,10 +114,9 @@ def main():
     print(dots)
     while not kilpailu.kilpailu_ohi():
         kilpailu.tunti_kuluu()
-        if kilpailu.tunnit % 10 == 0 and not kilpailu.kilpailu_ohi():
-            print(f"{color_bold}{color_cian}Tunti: {kilpailu.tunnit}{color_off}")
-            print(dots)
+        if kilpailu.tunnit % 10 == 0 and not kilpailu.kilpailu_ohi(): # toinen ehto koska jos viimeisellä autolla % 10 tuntia, ohjelmaa tulostaa tilanteen 2 kertaa
             kilpailu.tulosta_tilanne()
+
     kilpailu.tulosta_tilanne()
 
 
