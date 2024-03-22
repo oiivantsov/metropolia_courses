@@ -59,6 +59,7 @@ class Sähköauto(Auto):
             f"Akkukapasiteetti on {self.color}{self.akkukapasiteetti} kWh{color_off}\n" \
             f"{line}"
 
+
 class Polttomoottoriauto(Auto):
     def __init__(self, rekisteritunnus, huippunopeus, color, bensatankki, nopeus=0, matka=0, aika=0):
         self.bensatankki = bensatankki
@@ -70,8 +71,13 @@ class Polttomoottoriauto(Auto):
             f"{line}"
 
 
-sähköauto = Sähköauto(rekisteritunnus="ABC-15", huippunopeus=180, nopeus=120, color=colors[0], akkukapasiteetti=52.5)
-polttomoottoriauto = Polttomoottoriauto(rekisteritunnus="ACD-123", huippunopeus=165, nopeus=110, color=colors[1], bensatankki=32.3)
+# ----------------- PAAOHJELMA ------------------------------
+
+sähköauto = Sähköauto(rekisteritunnus="ABC-15", huippunopeus=180, color=colors[0], akkukapasiteetti=52.5)
+polttomoottoriauto = Polttomoottoriauto(rekisteritunnus="ACD-123", huippunopeus=165, color=colors[1], bensatankki=32.3)
+
+sähköauto.kiihdyta(nopeuden_muutos=120)
+polttomoottoriauto.kiihdyta(nopeuden_muutos=110)
 
 sähköauto.kulje(tunnit=3)
 polttomoottoriauto.kulje(tunnit=3)
